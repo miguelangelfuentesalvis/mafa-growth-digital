@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsAppChat from './components/WhatsAppChat';
 import ScrollToTop from './components/ScrollToTop';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Footer />
       <WhatsAppChat />
       <ScrollToTop />
+      <SpeedInsights />
     </div>
   );
 }
