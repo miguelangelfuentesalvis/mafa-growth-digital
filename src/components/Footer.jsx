@@ -105,7 +105,12 @@ const Footer = () => {
             <ul className="space-y-2">
               {services.map((service, index) => (
                 <li key={index}>
-                  <span className="text-muted-foreground text-sm">{service}</span>
+                  <button
+                    onClick={() => scrollToSection('services')}
+                    className="text-muted-foreground hover:text-primary transition-colors text-sm text-left"
+                  >
+                    {service}
+                  </button>
                 </li>
               ))}
             </ul>
@@ -169,4 +174,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
