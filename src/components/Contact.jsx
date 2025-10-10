@@ -29,8 +29,7 @@ const Contact = () => {
     const email = form.current.email.value;
 
     if (!validateEmail(email)) {
-      alert('El código de validación más reciente se está ejecutando. Por favor, introduce un correo con formato correcto (ej: tu@email.com).');
-      setEmailError('Error: El formato del correo no es válido.');
+      setEmailError('Por favor, introduce una dirección de correo válida.');
       return;
     }
 
@@ -304,7 +303,7 @@ const Contact = () => {
                 <Phone className="h-4 w-4 mr-2" />
                 Llamar Ahora
               </Button>
-            </motion.div
+            </motion.div>
           </motion.div>
         </div>
       </div>
