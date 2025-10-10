@@ -167,22 +167,37 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-foreground mb-2">
-                    Servicio de Interés
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    className="w-full px-3 py-2 border border-border rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                  >
-                    <option value="">Selecciona un servicio</option>
-                    {services.map((service, index) => (
-                      <option key={index} value={service}>
-                        {service}
-                      </option>
-                    ))}
-                  </select>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                      Teléfono <span className="text-muted-foreground/80">(Opcional)</span>
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      className="w-full px-3 py-2 border border-border rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                      placeholder="+56 9 1234 5678"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="service" className="block text-sm font-medium text-foreground mb-2">
+                      Servicio de Interés
+                    </label>
+                    <select
+                      id="service"
+                      name="service"
+                      className="w-full px-3 py-2 border border-border rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    >
+                      <option value="">Selecciona un servicio</option>
+                      {services.map((service, index) => (
+                        <option key={index} value={service}>
+                          {service}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
                 </div>
 
                 <div>
@@ -303,7 +318,7 @@ const Contact = () => {
                 <Phone className="h-4 w-4 mr-2" />
                 Llamar Ahora
               </Button>
-            </motion.div>
+            </motion.div
           </motion.div>
         </div>
       </div>
