@@ -9,16 +9,31 @@ import {
   Send, 
   Clock,
   MessageCircle,
-  CheckCircle
+  CheckCircle,
+  AlertCircle
 } from 'lucide-react';
 
 const Contact = () => {
   const form = useRef();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [emailError, setEmailError] = useState('');
+
+  const validateEmail = (email) => {
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return regex.test(email);
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
+    const email = form.current.email.value;
+
+    if (!validateEmail(email)) {
+      setEmailError('Por favor, introduce una dirección de correo válida.');
+      return;
+    }
+
+    setEmailError('');
     setIsSubmitting(true);
 
     emailjs.sendForm('service_h7ihhyj', 'template_p465cj7', form.current, '8NBHHtGSLX_4xry1u')
@@ -139,9 +154,16 @@ const Contact = () => {
                       id="email"
                       name="email"
                       required
-                      className="w-full px-3 py-2 border border-border rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                      className={`w-full px-3 py-2 border rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:border-transparent ${emailError ? 'border-destructive focus:ring-destructive' : 'border-border focus:ring-primary'}`}
                       placeholder="tu@email.com"
+                      onChange={() => setEmailError('')}
                     />
+                     {emailError && (
+                      <div className="flex items-center text-destructive text-sm mt-2">
+                        <AlertCircle className="h-4 w-4 mr-1" />
+                        {emailError}
+                      </div>
+                    )}
                   </div>
                 </div>
 
@@ -281,7 +303,7 @@ const Contact = () => {
                 <Phone className="h-4 w-4 mr-2" />
                 Llamar Ahora
               </Button>
-            </motion.div>
+            </motion.div
           </motion.div>
         </div>
       </div>
