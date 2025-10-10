@@ -79,7 +79,7 @@ const Portfolio = () => {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section id="portfolio" className="py-20 bg-muted/30">
+    <section id="portfolio" className="scroll-mt-32 py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -231,4 +231,3 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
-

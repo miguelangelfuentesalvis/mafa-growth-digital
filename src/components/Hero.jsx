@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, TrendingUp, Users, Award, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
@@ -12,7 +13,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen bg-gradient-to-br from-background via-muted/30 to-primary/10 flex items-center">
+    <section id="hero" className="scroll-mt-32 pt-28 min-h-screen bg-gradient-to-br from-background via-muted/30 to-primary/10 flex items-center">
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -37,12 +38,12 @@ const Hero = () => {
               transition={{ duration: 0.6 }}
               className="order-1 lg:order-2 text-center lg:text-left"
             >
-              <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+              <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
                 Impulsa tu negocio con{' '}
                 <span className="text-primary">IA y soluciones digitales</span>{' '}
                 que generan resultados exponenciales
               </h1>
-              <p className="text-xl text-muted-foreground mb-8">
+              <p className="text-lg text-muted-foreground mb-8">
                 Especialista en tecnologías emergentes que combina inteligencia artificial, 
                 marketing digital avanzado y desarrollo web moderno para crear soluciones 
                 automatizadas que generan resultados medibles y escalables.
@@ -147,4 +148,3 @@ const Hero = () => {
 };
 
 export default Hero;
-

@@ -47,7 +47,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-muted/30">
+    <section id="about" className="scroll-mt-32 py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -206,4 +206,3 @@ const About = () => {
 };
 
 export default About;
-
