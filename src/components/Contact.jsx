@@ -29,7 +29,8 @@ const Contact = () => {
     const email = form.current.email.value;
 
     if (!validateEmail(email)) {
-      setEmailError('Por favor, introduce una dirección de correo válida.');
+      alert('El código de validación más reciente se está ejecutando. Por favor, introduce un correo con formato correcto (ej: tu@email.com).');
+      setEmailError('Error: El formato del correo no es válido.');
       return;
     }
 
