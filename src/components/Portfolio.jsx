@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, TrendingUp, Code, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import portfolioWebDev from '/src/assets/portfolio-web-dev.jpg';
+import portfolioMarketing from '/src/assets/portfolio-marketing.png';
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -11,7 +13,7 @@ const Portfolio = () => {
       id: 1,
       title: 'Mi Portafolio Personal',
       description: 'Sitio web personal desarrollado con HTML, CSS y JavaScript, mostrando mis habilidades y proyectos.',
-      image: '/src/assets/portfolio-web-dev.jpg',
+      image: portfolioWebDev,
       category: 'web',
       technologies: ['HTML5', 'CSS3', 'JavaScript'],
       liveUrl: 'https://miguelangelfuentesalvis.github.io/mp-miguel-fuentes/',
@@ -22,7 +24,7 @@ const Portfolio = () => {
       id: 2,
       title: 'Campaña E-commerce con IA',
       description: 'Gestión completa de campaña publicitaria para tienda online, optimizada con IA para un ROI del 300%.',
-      image: '/src/assets/portfolio-marketing.jpg',
+      image: portfolioMarketing,
       category: 'marketing',
       technologies: ['Google Ads', 'Facebook Ads', 'IA', 'Analytics'],
       results: '+300% ROI, +150% Conversiones',
@@ -32,7 +34,7 @@ const Portfolio = () => {
       id: 3,
       title: 'Landing Page Corporativa Avanzada',
       description: 'Desarrollo de landing page optimizada para conversión con diseño responsivo y micro-interacciones IA.',
-      image: '/src/assets/portfolio-web-dev.jpg',
+      image: portfolioWebDev,
       category: 'web',
       technologies: ['React', 'TailwindCSS', 'Framer Motion', 'IA'],
       featured: false
@@ -41,7 +43,7 @@ const Portfolio = () => {
       id: 4,
       title: 'Optimización de Conversiones con ML',
       description: 'Análisis y optimización de funnel de ventas, mejorando la tasa de conversión en 85% con Machine Learning.',
-      image: '/src/assets/portfolio-marketing.jpg',
+      image: portfolioMarketing,
       category: 'marketing',
       technologies: ['Google Analytics', 'Hotjar', 'A/B Testing', 'Machine Learning'],
       results: '+85% Tasa de Conversión',
@@ -51,7 +53,7 @@ const Portfolio = () => {
       id: 5,
       title: 'App Web React con RSC',
       description: 'Aplicación web interactiva desarrollada con React Server Components y integración de APIs.',
-      image: '/src/assets/portfolio-web-dev.jpg',
+      image: portfolioWebDev,
       category: 'web',
       technologies: ['React', 'Next.js', 'Node.js', 'MySQL', 'RSC'],
       featured: false
@@ -60,7 +62,7 @@ const Portfolio = () => {
       id: 6,
       title: 'Estrategia Multi-canal Automatizada',
       description: 'Implementación de estrategia de marketing digital en múltiples canales con automatización IA.',
-      image: '/src/assets/portfolio-marketing.jpg',
+      image: portfolioMarketing,
       category: 'marketing',
       technologies: ['Google Ads', 'Facebook', 'Email Marketing', 'Automatización IA'],
       results: '+200% Alcance, +120% Leads',
@@ -126,17 +128,17 @@ const Portfolio = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow ${
+              className={`bg-card rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow group ${
                 project.featured ? 'md:col-span-2 lg:col-span-1' : ''
               }`}
             >
-              {/* Project Image Placeholder */}
-              <div className="h-48 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                {project.category === 'web' ? (
-                  <Code className="h-16 w-16 text-primary/60" />
-                ) : (
-                  <TrendingUp className="h-16 w-16 text-accent/60" />
-                )}
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
               </div>
 
               <div className="p-6">

@@ -91,6 +91,7 @@ const About = () => {
                   src="/images/yo-1.jpeg" 
                   alt="Miguel Fuentes trabajando" 
                   className="rounded-lg shadow-lg w-full h-auto object-cover"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -155,13 +156,13 @@ const About = () => {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-card p-6 rounded-lg shadow-sm flex flex-col items-center text-center">
-              <img src="/images/trafficker-certificate.jpeg" alt="Certificado Trafficker Digital" className="w-full h-auto max-h-64 object-contain mb-4" />
+              <img src="/images/trafficker-certificate.jpeg" alt="Certificado Trafficker Digital" className="w-full h-auto max-h-64 object-contain mb-4" loading="lazy" />
               <h4 className="text-lg font-semibold text-foreground mb-2">Máster Experto en Trafficker Digital</h4>
               <p className="text-primary font-medium">Instituto de Tráfico Online</p>
               <p className="text-sm text-muted-foreground">Expedido en Madrid, 15 de Marzo de 2021</p>
             </div>
             <div className="bg-card p-6 rounded-lg shadow-sm flex flex-col items-center text-center">
-              <img src="/images/web-certificate.jpeg" alt="Certificado Desarrollador Web Frontend" className="w-full h-auto max-h-64 object-contain mb-4" />
+              <img src="/images/web-certificate.jpeg" alt="Certificado Desarrollador Web Frontend" className="w-full h-auto max-h-64 object-contain mb-4" loading="lazy" />
               <h4 className="text-lg font-semibold text-foreground mb-2">Técnico Desarrollador Web Front End</h4>
               <p className="text-primary font-medium">FUNVAL Internacional</p>
               <p className="text-sm text-muted-foreground">18 de Junio de 2025</p>
