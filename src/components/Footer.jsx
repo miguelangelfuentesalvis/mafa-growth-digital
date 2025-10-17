@@ -60,7 +60,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-4">
-              <img src="/images/mafalogo-1.png" alt="Mafa Growth Digital" className="h-16 w-auto" />
+              <img src="/images/cabemg.png" alt="Mafa Growth Digital" className="h-16 w-auto" />
             </div>
             <p className="text-muted-foreground text-sm mb-6">
               Impulso tu negocio con soluciones digitales que generan resultados. 

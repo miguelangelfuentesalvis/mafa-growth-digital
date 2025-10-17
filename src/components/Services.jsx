@@ -26,18 +26,6 @@ const Services = () => {
       color: 'text-primary'
     },
     {
-      icon: TrendingUp,
-      title: 'Marketing Digital con IA',
-      description: 'Campañas inteligentes que se optimizan automáticamente para maximizar el ROI.',
-      features: [
-        'Automatización de campañas con algoritmos de IA',
-        'Personalización en tiempo real basada en comportamiento',
-        'Marketing conversacional y chatbots inteligentes',
-        'Análisis predictivo para optimización continua'
-      ],
-      color: 'text-accent'
-    },
-    {
       icon: BarChart3,
       title: 'Análisis Inteligente y Automatización',
       description: 'Sistemas que analizan, aprenden y optimizan tus métricas automáticamente.',
@@ -104,7 +92,7 @@ const Services = () => {
             Mis Servicios
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Soluciones integrales que combinan desarrollo web y marketing digital
+            Enfocado en crear soluciones de desarrollo web innovadoras y de alto rendimiento.
           </p>
         </motion.div>
 

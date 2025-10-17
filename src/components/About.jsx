@@ -134,7 +134,8 @@ const About = () => {
                       whileInView={{ width: `${skill.level}%` }}
                       transition={{ duration: 1, delay: index * 0.1 }}
                       viewport={{ once: true }}
-                      className="bg-primary h-2 rounded-full"
+                      className="h-2 rounded-full"
+                      style={{ background: 'linear-gradient(90deg, #6A00C4 0%, #0059B3 50%, #00BFFF 100%)' }}
                     />
                   </div>
                 </div>

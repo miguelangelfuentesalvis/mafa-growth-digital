@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, TrendingUp, Users, Award, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
@@ -28,6 +27,7 @@ const Hero = () => {
                 src="/images/Logomg.png" 
                 alt="Mafa Growth Digital Logo" 
                 className="w-full h-auto rounded-lg shadow-2xl"
+                loading="lazy"
               />
             </motion.div>
 

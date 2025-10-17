@@ -20,7 +20,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img src="/images/mafalogo-1.png" alt="Mafa Growth Digital" className="h-18 w-auto" />
+            <img src="/images/cabemg.png" alt="Mafa Growth Digital" className="h-16 w-auto" loading="lazy" />
           </div>
 
           {/* Desktop Navigation */}
