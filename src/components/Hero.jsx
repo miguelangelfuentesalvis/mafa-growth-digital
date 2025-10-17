@@ -25,7 +25,7 @@ const Hero = () => {
               className="order-2 lg:order-1"
             >
               <img 
-                src="/images/logo-optimized.png" 
+                src="/images/Logomg.png" 
                 alt="Mafa Growth Digital Logo" 
                 className="w-full h-auto rounded-lg shadow-2xl"
               />
