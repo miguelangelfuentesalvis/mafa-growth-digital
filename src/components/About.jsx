@@ -25,27 +25,6 @@ const About = () => {
     { name: 'Analytics', icon: BarChart3, level: 80 }
   ];
 
-  const experience = [
-    {
-      title: 'Trafficker Digital',
-      company: 'Independiente',
-      period: 'Marzo 2021 - Abril 2023',
-      description: 'Gestión de campañas digitales, desarrollo de capacidad analítica y orientación a resultados.'
-    },
-    {
-      title: 'Desarrollador Web Front-End',
-      company: 'Funval Internacional',
-      period: 'Febrero - Mayo 2025',
-      description: 'Formación intensiva en desarrollo web con enfoque en React, Node.js y bases de datos.'
-    },
-    {
-      title: 'Administrador Logístico',
-      company: 'DHL Supply Chain Chile',
-      period: 'Febrero 2017 - Septiembre 2019',
-      description: 'Coordinación de operaciones, organización y resolución de problemas en entorno de alta demanda.'
-    }
-  ];
-
   return (
     <section id="about" className="scroll-mt-32 py-20 bg-muted/30">
       <div className="container mx-auto px-4">
@@ -168,38 +147,6 @@ const About = () => {
               <p className="text-primary font-medium">FUNVAL Internacional</p>
               <p className="text-sm text-muted-foreground">18 de Junio de 2025</p>
             </div>
-          </div>
-        </motion.div>
-
-        {/* Experience Timeline */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-2xl font-semibold text-foreground mb-8 text-center">
-            Experiencia Profesional
-          </h3>
-          <div className="max-w-3xl mx-auto">
-            {experience.map((exp, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className="relative pl-8 pb-8 border-l-2 border-primary/20 last:border-l-0"
-              >
-                <div className="absolute -left-2 top-0 w-4 h-4 bg-primary rounded-full"></div>
-                <div className="bg-card p-6 rounded-lg shadow-sm">
-                  <h4 className="text-lg font-semibold text-foreground">{exp.title}</h4>
-                  <p className="text-primary font-medium">{exp.company}</p>
-                  <p className="text-sm text-muted-foreground mb-3">{exp.period}</p>
-                  <p className="text-muted-foreground">{exp.description}</p>
-                </div>
-              </motion.div>
-            ))}
           </div>
         </motion.div>
       </div>
