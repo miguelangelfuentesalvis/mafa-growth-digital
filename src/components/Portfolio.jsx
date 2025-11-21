@@ -13,7 +13,7 @@ const Portfolio = () => {
       category: 'web',
       technologies: ['React', 'Vite', 'TailwindCSS', 'Framer Motion'],
       liveUrl: '#',
-      githubUrl: 'https://github.com/miguelangelfuentesalvis/react-vite-tailwindcss-portfolio',
+      githubUrl: 'https://github.com/miguelangelfuentesalvis',
       featured: true
     },
     // Para agregar un nuevo proyecto, descomenta el siguiente bloque y personalízalo
